@@ -9,7 +9,12 @@ var traverseDomAndCollectElements = function(matchFunc, startEl) {
   // usa matchFunc para identificar elementos que matchien
 
   // TU CÓDIGO AQUÍ
-  
+  if (matchFunc(startEl)) resultSet.push(startEl);
+  for (let i = 0; i < startEl.children.length; i++){
+    var result = traverseDomAndCollectElements(matchFunc, startEl.children[i]);
+    resultSet = [...resultSet, ...result];
+  }
+  return resultSet;
 };
 
 // Detecta y devuelve el tipo de selector
@@ -33,21 +38,25 @@ var matchFunctionMaker = function(selector) {
   var selectorType = selectorTypeMatcher(selector);
   var matchFunction;
   if (selectorType === "id") { 
-    let newId = selector.substring(1);
-   function matchFunction (elemento){
-    if (elemento.id === newId){return true}
-    return false;
+    matchFunction = elemento =>{
+    return `#${elemento.id}` === selector;
    }
   } else if (selectorType === "class") {
-    let newClass = selector.substring(1);
-   function matchFunction (elemento){
-    if (elemento.classList.contains(newClass)){return true}
-    return false;
+    matchFunction = elemento =>{
+    return elemento.classList.contains(selector.substring(1));
    }
   } else if (selectorType === "tag.class") {
+    matchFunction = elemento =>{
+      let [t, c] = selector.split('.');
+      return matchFunctionMaker(t)(elemento) && matchFunctionMaker(`.${c}`)(elemento) // resuelto con recursividad por el profe
+      // if(elemento.tagName.toLowerCase() === tag && elemento.classList.contains(class)){return true}
+      // return false;
+    }
     
   } else if (selectorType === "tag") {
-    
+    matchFunction = elemento =>{
+      return elemento.tagName.toLowerCase() === selector
+    }
   }
   return matchFunction;
 };
