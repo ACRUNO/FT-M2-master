@@ -1,13 +1,13 @@
 import React from 'react';
 import Card from './Card.jsx';
 
-export default function Cards({cities}) {
+export default function Cards(props) {
   // acá va tu código
   // tip, podés usar un map
   return (
     <div>
         {
-          cities.map(card => (
+          props.cities.map(card => (
             <Card
             max={card.main.temp_max}
             min={card.main.temp_min}
