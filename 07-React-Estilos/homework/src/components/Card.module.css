@@ -1,0 +1,51 @@
+.mainBox {
+    /* border-style: groove;
+    border-radius: 5px;
+    border-width: 5px;
+    padding: 20px;
+    width: 20%;
+    display: inline-block;
+    justify-content: center;
+    overflow: visible; */
+
+    /* ACA COPIO EL CODIGO DEL PROFE */
+    
+    /* border: rgba(102, 96, 96, 0.61) solid 1px; */
+    border-style: groove;
+    border-width: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 175px;
+    position: relative ;
+}
+
+
+.btn {
+    background-color: rgb(253, 90, 90);
+    border: none;
+    color: whitesmoke;
+    border-radius: 5px;
+    height: min-content;
+    width: min-content;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.container {
+    /* display: flex;
+    align-items: center;
+    padding: 5px; */
+    
+    /* ACA COPIO EL CODIGO DEL PROFE  */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container img{
+    background-color: skyblue;
+    border-radius: 10px;
+}
