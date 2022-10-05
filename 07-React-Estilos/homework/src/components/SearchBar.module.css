@@ -1,0 +1,14 @@
+.mainBox input{
+    background-color: rgba(140, 212, 240, 0.63);
+    border-style: groove;
+    margin-bottom: 40px;
+    border-width: 2px;
+}
+
+.btn{
+    background-color: rgba(48, 44, 44, 0.705);
+    color: whitesmoke;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
