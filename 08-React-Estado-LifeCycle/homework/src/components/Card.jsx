@@ -9,7 +9,7 @@ export default function Card ({min, max, name, img, onClose, id}) {
         </div>
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
-          <div className="row">
+          <div className="row mr-1">
             <div className="col-sm-4 col-md-4 col-lg-4">
               <p>Min</p>
               <p>{min}°</p>
@@ -19,7 +19,7 @@ export default function Card ({min, max, name, img, onClose, id}) {
               <p>{max}°</p>
             </div>
             <div className="col-sm-4 col-md-4 col-lg-4">
-              <img className="iconoClima" src={"http://openweathermap.org/img/wn/"+img+"@2x.png"} width="80" height="80" alt="" />
+              <img className="iconoClima" src={"http://openweathermap.org/img/wn/"+img+"@2x.png"} width="80" height="80" alt=""/>
             </div>
           </div>
         </div>

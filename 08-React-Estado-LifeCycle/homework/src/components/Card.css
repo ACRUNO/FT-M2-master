@@ -1,11 +1,26 @@
 .card {
   margin: 20px;
   width: 18rem;
+  background-color: rgba(166, 200, 214, 0.384);
+  border: solid 2px rgba(0, 2, 3, 0.473);
+}
+
+.card:hover {
+  background-color: rgba(21, 243, 158, 0.384);
+  
 }
 
 .card-title {
+  margin-top: -15px;
   margin-bottom: 15px;
-}
+  display:inline-block; 
+  background-color: rgba(0, 4, 255, 0.548);
+  padding: 10px;
+  border: solid 2px;
+  border-radius: 10px;
+  border-color: azure;
+  color: aliceblue;
+  }
 
 #closeIcon {
   display: flex;
@@ -17,4 +32,10 @@
 .card-body {
   margin-top: 0px !important;
   padding-top: 0px !important;
+}
+
+.iconoClima {
+  background-color: skyblue;
+  border-radius: 10px;
+  border: solid 1px;
 }
