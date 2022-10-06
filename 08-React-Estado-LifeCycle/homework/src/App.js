@@ -26,7 +26,7 @@ export default function App() {
         }
         setCities(oldCities => [...oldCities, ciudad]);
       }else {
-        alert("Ciudad no encontrada");
+        alert(recurso.message);
       } 
     })
     };
