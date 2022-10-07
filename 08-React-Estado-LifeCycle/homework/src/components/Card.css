@@ -39,3 +39,20 @@
   border-radius: 10px;
   border: solid 1px;
 }
+
+.min {
+  font-style: italic;
+  
+}
+
+.btn {
+  background-color: rgba(166, 200, 214, 0.384);
+  height: 25px;
+  width: 25px;
+  color: black;
+  text-size-adjust: auto;
+}
+
+.btn:hover{
+  background-color: red;
+}
