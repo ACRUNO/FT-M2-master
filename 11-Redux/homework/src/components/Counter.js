@@ -13,7 +13,7 @@ class Counter extends Component {
     // Extra Credit
     incrementAsync = () => {
         //  Implementar una función de incremento que aumenta después de esperar un segundo
-        setTimeout(this.props.increment,1000);
+        setTimeout(this.props.increment, 1000);
     };
 
     render() {
