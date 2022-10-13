@@ -14,9 +14,9 @@ var valor = document.getElementById('valor');
 // Utilizamos el elemento obtenido arriba para mostrar el State.
 function renderContador() {
   // Obtenemos la propiedad 'contador' de nuestro store:
-  var cont = store.getState().contador;
+  var count = store.getState().contador;
   // Seteamos el numero obtenido como texto dentro del elemento con id 'valor':
-  valor.innerText = cont;
+  valor.innerText = count;
 }
 
 // Ejecutamos la funcion 'renderContador':
